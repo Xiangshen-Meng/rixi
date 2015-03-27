@@ -16054,3 +16054,15 @@ input.todo-search-field::-webkit-input-placeholder {
     background: #bdc3c7 !important;
   }
 }
+body {
+  padding-top: 50px;
+}
+.register-page {
+  padding-top: 50px;
+}
+.password-page {
+  padding-top: 50px;
+}
+.login-page {
+  padding-top: 50px;
+}
