@@ -6,7 +6,7 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div class="panel panel-success">
-          <div class="panel-heading">登陆</div>
+          <div class="panel-heading">登录</div>
           <div class="panel-body">
             @include('auth.error_message')
 
@@ -29,19 +29,19 @@
 
               <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" name="remember"> 记住我
-                    </label>
-                  </div>
+                  <label class="checkbox">
+                    <input type="checkbox" data-toggle="checkbox" name="remember">
+                    记住我
+                  </label>
                 </div>
               </div>
 
               <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">
-                  <button type="submit" class="btn btn-primary">登陆啦</button>
+                  <button type="submit" class="btn btn-primary">马上登录</button>
+                  <a href="{{ url('/auth/register') }}" type="button" class="btn btn-danger">我要注册</a>
 
-                  <a class="btn btn-link" href="{{ url('/password/email') }}">忘记了密码？</a>
+                  <a class="btn btn-link" href="{{ url('/password/email') }}">忘记密码？</a>
                 </div>
               </div>
             </form>

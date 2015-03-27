@@ -44,8 +44,9 @@
               <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">
                   <button type="submit" class="btn btn-primary">
-                    提交
+                    提交注册
                   </button>
+                  <a class="btn btn-link" href="{{ url('/auth/login') }}"> 我有账号啦，去登录</a>
                 </div>
               </div>
             </form>
