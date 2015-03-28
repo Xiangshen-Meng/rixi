@@ -15,7 +15,6 @@
     <![endif]-->
   </head>
   <body>
-    @include('shared.navbar')
 
     @yield('content')
 

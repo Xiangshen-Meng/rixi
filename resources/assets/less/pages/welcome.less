@@ -1,0 +1,35 @@
+@import "../variables";
+
+.welcome-banner {
+  @media (min-width: @screen-md-min) {
+    height: 470px;
+  }
+
+  @media (max-width: @screen-md-min) {
+    height: 940px;
+  }
+
+  background-color: #82b541;
+
+  .welcome-banner-text {
+    padding: 50px 0px 0 0px;
+
+    h3 {
+      color: white;
+      text-align: center;
+    }
+
+    .welcome-banner-text-content {
+      padding-top: 15px;
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+}
+
+.welcome-dialog {
+  height: 100px;
+  text-align: center;
+  padding-top: 15px;
+}

@@ -1,48 +1,29 @@
-<html>
-	<head>
-		<title>Laravel</title>
-		
-		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+@extends('app')
 
-		<style>
-			body {
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				height: 100%;
-				color: #B0BEC5;
-				display: table;
-				font-weight: 100;
-				font-family: 'Lato';
-			}
+@section('content')
+  @include('shared.topbar')
+  <div class="welcome-banner">
+    <div class="container">
+      <div class="col-md-6">
+        <img src="/images/sushi.svg" height="400" class="center-block">
+      </div>
 
-			.container {
-				text-align: center;
-				display: table-cell;
-				vertical-align: middle;
-			}
+      <div class="col-md-6">
+        <div class="welcome-banner-text">
+          <h3>关于日本你想知道什么？</h3>
+          <div class="welcome-banner-text-content">
+            服装？料理？化妆品？文化？关于日本，把想知道的一切都告诉我们吧！
+            我们会尽快的整理出资料通知您的～
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-			.content {
-				text-align: center;
-				display: inline-block;
-			}
-
-			.title {
-				font-size: 96px;
-				margin-bottom: 40px;
-			}
-
-			.quote {
-				font-size: 24px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<div class="content">
-				<div class="title">Laravel 5</div>
-				<div class="quote">{{ Inspiring::quote() }}</div>
-			</div>
-		</div>
-	</body>
-</html>
+  <div class="welcome-dialog">
+    <div class="container">
+      <h4>等你来信哦</h4>
+    </div>
+  </div>
+  @include('shared.footer')
+@endsection

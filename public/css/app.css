@@ -16054,15 +16054,65 @@ input.todo-search-field::-webkit-input-placeholder {
     background: #bdc3c7 !important;
   }
 }
-body {
-  padding-top: 50px;
+.topbar {
+  height: 90px;
 }
-.register-page {
+.topbar h1 {
+  font-size: 30px;
+  color: #708933;
+}
+.topbar .topbar-login {
+  padding-top: 25px;
+}
+@media (min-width: 992px) {
+  .max-input-length {
+    max-width: 300px;
+  }
+}
+.login-page {
   padding-top: 50px;
 }
 .password-page {
   padding-top: 50px;
 }
-.login-page {
+.register-page {
   padding-top: 50px;
+}
+.rixi-panel-title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+.welcome-banner {
+  background-color: #82b541;
+}
+@media (min-width: 992px) {
+  .welcome-banner {
+    height: 470px;
+  }
+}
+@media (max-width: 992px) {
+  .welcome-banner {
+    height: 940px;
+  }
+}
+.welcome-banner .welcome-banner-text {
+  padding: 50px 0px 0 0px;
+}
+.welcome-banner .welcome-banner-text h3 {
+  color: white;
+  text-align: center;
+}
+.welcome-banner .welcome-banner-text .welcome-banner-text-content {
+  padding-top: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+.welcome-dialog {
+  height: 100px;
+  text-align: center;
+  padding-top: 15px;
 }
