@@ -30,7 +30,17 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+		return view('home')->with('active_home', 'active');
+	}
+
+	/**
+	 * Show the application setting to the user.
+	 *
+	 * @return Response
+	 */
+	public function setting()
+	{
+		return view('setting')->with('active_setting', 'active');
 	}
 
 }

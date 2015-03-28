@@ -16064,6 +16064,19 @@ input.todo-search-field::-webkit-input-placeholder {
 .topbar .topbar-login {
   padding-top: 25px;
 }
+@media (min-width: 768px) {
+  .rixi-main {
+    padding-left: 104px;
+  }
+}
+@media (max-width: 768px) {
+  .rixi-main {
+    padding-top: 70px;
+  }
+}
+.rixi-main .rixi-main-panel {
+  padding-top: 30px;
+}
 @media (min-width: 992px) {
   .max-input-length {
     max-width: 300px;
