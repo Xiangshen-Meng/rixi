@@ -16056,6 +16056,7 @@ input.todo-search-field::-webkit-input-placeholder {
 }
 .topbar {
   height: 90px;
+  border-bottom: 1px solid #e5e5e5;
 }
 .topbar h1 {
   font-size: 30px;

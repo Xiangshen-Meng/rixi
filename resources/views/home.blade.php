@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-  @include('shared.sidebar')
+  @include('shared.topbar')
 
   <div class="rixi-main">
     <div class="container-fluid">

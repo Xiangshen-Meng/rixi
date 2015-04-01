@@ -6,10 +6,14 @@
       </div>
       <div class="col-xs-3 col-xs-offset-4 col-sm-2 col-sm-offset-8">
         <div class="topbar-login">
-          @if (Auth::guest())
-            <a href="{{ url('/auth/login') }}" type="button" class="btn btn-primary">我要登录</a>
+          @if (\Route::is('welcome_page'))
+            <a href="{{ url('/auth/login') }}" type="button" class="btn btn-primary">我去看看</a>
           @else
-            <a href="{{ url('/home') }}">{{ Auth::user()->name }}</a>
+            @if (Auth::guest())
+              <a href="{{ url('/auth/login') }}" type="button" class="btn btn-primary">我要登录</a>
+            @else
+              <a href="{{ url('/home') }}">{{ Auth::user()->name }}</a>
+            @endif
           @endif
         </div>
       </div>
