@@ -5,7 +5,7 @@
 
   <div class="rixi-main">
     <div class="container">
-      <h2>主页</h2>
+      <h2>Topic Index</h2>
     </div>
   </div>
 @endsection

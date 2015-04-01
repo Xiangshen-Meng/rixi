@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', ['as' => 'welcome_page', 'uses' => 'WelcomeController@index']);
+Route::get('/', ['as' => 'welcome', 'uses' => 'WelcomeController@index']);
 
 Route::get('home', 'HomeController@index');
 Route::get('setting', 'HomeController@setting');
@@ -20,3 +20,5 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::resource('topic', 'TopicController');
