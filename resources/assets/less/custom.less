@@ -14,16 +14,33 @@
   }
 }
 
+.home-sidebar {
+  .sidebar-element {
+    padding: 10px 0;
+
+    > a {
+      color: @brand-primary;
+      font-weight: 700;
+      font-size: 18px;
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: @green-sea;
+      }
+    }
+  }
+}
+
 .rixi-main {
   @media (min-width: @screen-sm-min) {
-    padding-left: 104px;
+    padding-top: 50px;
   }
 
   @media (max-width: @screen-sm-min) {
-    padding-top: 70px;
+    padding-top: 30px;
   }
 
   .rixi-main-panel {
-    padding-top: 30px;
   }
 }

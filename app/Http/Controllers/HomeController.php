@@ -30,7 +30,7 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home')->with('active_home', 'active');
+		return view('home.index');
 	}
 
 	/**
@@ -40,7 +40,7 @@ class HomeController extends Controller {
 	 */
 	public function setting()
 	{
-		return view('setting')->with('active_setting', 'active');
+		return view('home.setting');
 	}
 
 }

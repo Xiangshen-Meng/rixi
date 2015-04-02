@@ -16065,18 +16065,31 @@ input.todo-search-field::-webkit-input-placeholder {
 .topbar .topbar-login {
   padding-top: 25px;
 }
+.home-sidebar .sidebar-element {
+  padding: 10px 0;
+}
+.home-sidebar .sidebar-element > a {
+  color: #34495e;
+  font-weight: 700;
+  font-size: 18px;
+}
+.home-sidebar .sidebar-element > a:hover,
+.home-sidebar .sidebar-element > a:focus,
+.home-sidebar .sidebar-element > a.active {
+  color: #16a085;
+}
 @media (min-width: 768px) {
   .rixi-main {
-    padding-left: 104px;
+    padding-top: 50px;
   }
 }
 @media (max-width: 768px) {
   .rixi-main {
-    padding-top: 70px;
+    padding-top: 30px;
   }
 }
-.rixi-main .rixi-main-panel {
-  padding-top: 30px;
+.icon-padding-right {
+  padding-right: 7px;
 }
 @media (min-width: 992px) {
   .max-input-length {
