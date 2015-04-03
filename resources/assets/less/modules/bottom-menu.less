@@ -3,6 +3,7 @@
 // --------------------------------------------------
 
 .bottom-menu {
+  border-top: 1px solid #e5e5e5;
   background-color: @bottom-menu-bg;
   color: @bottom-menu-color;
   padding-top: 42px;
@@ -93,8 +94,10 @@
 
 // Unstiled list
 .bottom-menu-list {
-  font-size: ceil((@component-font-size-base * 0.933)); // ~14px
+  // font-size: ceil((@component-font-size-base * 0.933)); // ~14px
   line-height: 1.286; // ~18px
+  font-size: 18px;
+  font-weight: 500;
   margin-bottom: 15px;
 
   @media (min-width: @grid-float-breakpoint) {

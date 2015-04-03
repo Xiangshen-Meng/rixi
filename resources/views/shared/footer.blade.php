@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-2 col-sm-2">
-        <a href="" class="bottom-menu-brand">日系</a>
+        <a href="" class="bottom-menu-brand">日系问答</a>
       </div>
       <div class="col-md-8 col-sm-8">
         <ul class="bottom-menu-list">
