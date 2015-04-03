@@ -33,7 +33,7 @@
       <div class="topic-list">
         <div class="topic">
           <div class="topic-title">
-            <a href="">关于日本你想知道什么？</a>
+            <a href="{{ route('topic.show') }}">关于日本你想知道什么？</a>
           </div>
           <div class="topic-description">
             服装？料理？化妆品？文化？关于日本，把想知道的一切都告诉我们吧！ 我们会尽快的整理出资料通知您的～

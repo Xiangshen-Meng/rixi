@@ -10992,7 +10992,7 @@ fieldset[disabled] .input-group-btn .btn-default.active {
   background-color: rgba(202, 206, 209, 0.5);
 }
 .dropdown-menu > li > a {
-  padding: 8px 16px;
+  padding: 15px 16px;
   line-height: 1.429;
   color: #606d7a;
 }
@@ -16218,4 +16218,13 @@ input.todo-search-field::-webkit-input-placeholder {
 .topic-list .topic .topic-description {
   font-size: 16px;
   padding-bottom: 10px;
+}
+.topic-panel {
+  max-width: 800px;
+  min-height: 450px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.topic-panel .topic-title h1 {
+  font-size: 30px;
 }

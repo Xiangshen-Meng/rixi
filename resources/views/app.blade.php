@@ -2,7 +2,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8">
-    <title>日系</title>
+    <title>日系问答</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">

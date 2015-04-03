@@ -2,7 +2,6 @@
 
 @section('content')
   @include('shared.topbar')
-  <div></div>
   <div class="rixi-main">
     <div class="container">
       <div class="form-header">
