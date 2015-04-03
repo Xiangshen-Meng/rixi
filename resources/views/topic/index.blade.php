@@ -27,7 +27,7 @@
           <p>总计 <strong class="text-primary">9999</strong> 个话题</p>
         </div>
         <div class="new-topic-button pull-right">
-          <a href="" class="btn btn-inverse">新的话题</a>
+          <a href="{{ route('topic.create') }}" class="btn btn-inverse">新的话题</a>
         </div>
       </div>
       <div class="topic-list">

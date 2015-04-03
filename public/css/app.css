@@ -16096,6 +16096,45 @@ input.todo-search-field::-webkit-input-placeholder {
 .span-padding-right {
   padding-right: 15px;
 }
+.form-header {
+  text-align: center;
+  max-width: 690px;
+  margin: 0 auto;
+  height: 90px;
+  margin-bottom: 10px;
+}
+.form-header h1 {
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+.form-header p {
+  color: #7F8C8D;
+}
+.form-panel {
+  padding-top: 30px;
+  max-width: 690px;
+  margin: 0 auto;
+}
+.form-panel .form-group label {
+  font-weight: bold;
+}
+.form-panel .form-group input {
+  border-radius: 3px;
+  border: 1px solid #d4d4d4;
+  padding: 30px 20px;
+}
+.form-panel .form-group textarea {
+  border-radius: 3px;
+  border: 1px solid #d4d4d4;
+  padding: 20px;
+}
+.form-panel .btn-submit {
+  width: 100%;
+  background-color: #93cc76;
+  border-radius: 3px;
+  height: 60px;
+  color: white;
+}
 @media (min-width: 992px) {
   .max-input-length {
     max-width: 300px;
