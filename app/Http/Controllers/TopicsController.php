@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class TopicController extends Controller {
+class TopicsController extends Controller {
 
   /**
    * Display a listing of the resource.
@@ -14,7 +14,7 @@ class TopicController extends Controller {
    */
   public function index()
   {
-    return view('topic.index');
+    return view('topics.index');
   }
 
   /**
@@ -24,7 +24,7 @@ class TopicController extends Controller {
    */
   public function create()
   {
-    return view('topic.create');
+    return view('topics.create');
   }
 
   /**
@@ -45,7 +45,7 @@ class TopicController extends Controller {
    */
   public function show($id)
   {
-    return view('topic.show');
+    return view('topics.show');
   }
 
   /**

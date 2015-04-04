@@ -21,4 +21,4 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::resource('topic', 'TopicController');
+Route::resource('topics', 'TopicsController');

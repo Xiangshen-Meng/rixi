@@ -144,7 +144,6 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
-		'Barryvdh\Debugbar\ServiceProvider',
 
 	],
 
@@ -193,7 +192,6 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
-		'Debugbar'	=> 'Barryvdh\Debugbar\Facade',
 
 	],
 

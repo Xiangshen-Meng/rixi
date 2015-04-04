@@ -7,10 +7,10 @@
       <div class="col-xs-5 col-xs-offset-1 col-sm-3 col-sm-offset-5">
         <div class="topbar-login">
           @if (\Route::is('welcome'))
-            <a href="{{ route('topic.index') }}" type="button" class="btn btn-primary">我去看看</a>
+            <a href="{{ route('topics.index') }}" type="button" class="btn btn-primary">我去看看</a>
           @else
             <div class="btn-group">
-              <a href="{{ route('topic.index') }}" class="btn btn-primary" type="button">话题中心</a>
+              <a href="{{ route('topics.index') }}" class="btn btn-primary" type="button">话题中心</a>
               <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" type="button">
                 <span class="caret"></span>
               </button>
