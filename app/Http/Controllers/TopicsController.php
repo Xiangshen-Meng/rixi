@@ -3,6 +3,9 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Http\Requests\TopicRequest;
+use App\Topic;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class TopicsController extends Controller
@@ -19,7 +22,8 @@ class TopicsController extends Controller
      */
     public function index()
     {
-        return view('topics.index');
+        $topics = Topic::all();
+        return view('topics.index', compact('topics'));
     }
 
     /**
@@ -35,11 +39,12 @@ class TopicsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
+     * @param TopicRequest $request
      * @return Response
      */
-    public function store()
+    public function store(TopicRequest $request)
     {
-        \Auth::user()->topics()->create(\Request::all());
+        Auth::user()->topics()->create($request->all());
         return redirect('topics');
     }
 
@@ -51,7 +56,8 @@ class TopicsController extends Controller
      */
     public function show($id)
     {
-        return view('topics.show');
+        $topic = Topic::findOrFail($id);
+        return view('topics.show', compact('topic'));
     }
 
     /**

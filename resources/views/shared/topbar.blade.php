@@ -18,19 +18,19 @@
               @if (Auth::guest())
                 <li>
                   <a href="{{ url('/auth/login') }}">
-                    <i class="fa fa-user icon-padding-right"></i> 我要登录
+                    <span class="fui-user icon-padding-right"></span> 我要登录
                   </a>
                 </li>
               @else
                 <li>
                   <a href="{{ url('/home') }}">
-                    <i class="fa fa-user icon-padding-right"></i> {{ Auth::user()->name }}
+                    <span class="fui-user icon-padding-right"></span> {{ Auth::user()->name }}
                   </a>
                 </li>
                 <li class="divider"></li>
                 <li>
                   <a href="{{ url('/auth/logout') }}">
-                    <i class="fa fa-sign-out icon-padding-right"></i> 退出登录
+                    <span class="fui-exit icon-padding-right"></span> 退出登录
                   </a>
                 </li>
               @endif
