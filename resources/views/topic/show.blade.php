@@ -4,7 +4,7 @@
   @include('shared.topbar')
   <div class="rixi-main">
     <div class="container">
-        @include('topics.topic')
+        @include('topic.topic')
     </div>
   </div>
   @include('shared.footer')

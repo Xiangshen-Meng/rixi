@@ -13,7 +13,7 @@ class TopicRequest extends Request
      */
     public function authorize()
     {
-        return $this->route('topics') ? true : Auth::check();
+        return $this->route('topic') ? true : Auth::check();
     }
 
     /**

@@ -17,8 +17,8 @@ Route::get('home', ['as' => 'home', 'uses' => 'HomeController@index']);
 Route::get('setting', ['as' => 'setting', 'uses' => 'HomeController@setting']);
 
 Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
 ]);
 
-Route::resource('topics', 'TopicsController');
+Route::resource('topic', 'TopicsController');

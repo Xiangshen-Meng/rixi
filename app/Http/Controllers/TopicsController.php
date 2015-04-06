@@ -7,6 +7,7 @@ use App\Http\Requests\TopicRequest;
 use App\Topic;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class TopicsController extends Controller
 {
@@ -23,7 +24,7 @@ class TopicsController extends Controller
     public function index()
     {
         $topics = Topic::all();
-        return view('topics.index', compact('topics'));
+        return view('topic.index', compact('topics'));
     }
 
     /**
@@ -33,7 +34,7 @@ class TopicsController extends Controller
      */
     public function create()
     {
-        return view('topics.create');
+        return view('topic.create');
     }
 
     /**
@@ -45,41 +46,41 @@ class TopicsController extends Controller
     public function store(TopicRequest $request)
     {
         Auth::user()->topics()->create($request->all());
-        return redirect('topics');
+        return Redirect('topic');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param $topic
      * @return Response
      */
-    public function show($id)
+    public function show($topic)
     {
-        $topic = Topic::findOrFail($id);
-        return view('topics.show', compact('topic'));
+        return view('topic.show', compact('topic'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
+     * @param $topic
      * @return Response
      */
-    public function edit($id)
+    public function edit($topic)
     {
-        //
+        return view('topic.edit', compact('topic'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  int $id
+     * @param TopicRequest $request
      * @return Response
      */
-    public function update($id)
+    public function update(TopicRequest $request, $topic)
     {
-        //
+        $topic->update($request->all());
+        return Redirect::route('topic.show', $topic);
     }
 
     /**
