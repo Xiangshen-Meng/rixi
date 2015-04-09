@@ -1,4 +1,4 @@
-var elixir = require('laravel-elixir');
+var elixir = require("laravel-elixir");
 
 /*
  |--------------------------------------------------------------------------
@@ -13,7 +13,5 @@ var elixir = require('laravel-elixir');
 elixir.config.sourcemaps = false;
 
 elixir(function(mix) {
-    mix.less('app.less')
-       .scriptsIn('resources/assets/scripts', 'public/js/app.js')
-       .version(["css/app.css", "js/app.js"]);
+    mix.version(["public/css/app.css", "public/js/app.js"]);
 });
