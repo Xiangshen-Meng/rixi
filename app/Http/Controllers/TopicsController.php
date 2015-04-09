@@ -7,7 +7,6 @@ use App\Http\Requests\TopicRequest;
 use App\Topic;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 
 class TopicsController extends Controller
 {
@@ -46,7 +45,7 @@ class TopicsController extends Controller
     public function store(TopicRequest $request)
     {
         Auth::user()->topics()->create($request->all());
-        return Redirect('topic');
+        return redirect('topic');
     }
 
     /**
@@ -68,19 +67,24 @@ class TopicsController extends Controller
      */
     public function edit($topic)
     {
-        return view('topic.edit', compact('topic'));
+        if ($topic->user_id == Auth::id()) {
+            return view('topic.edit', compact('topic'));
+        } else {
+            return redirect()->route('topic.show', $topic)->with('message', '啊哦，这可不好哦～');
+        }
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param TopicRequest $request
+     * @param $topic
      * @return Response
      */
     public function update(TopicRequest $request, $topic)
     {
         $topic->update($request->all());
-        return Redirect::route('topic.show', $topic);
+        return redirect()->route('topic.show', $topic);
     }
 
     /**

@@ -1,6 +1,7 @@
 <?php namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
+use App\Topic;
 use Illuminate\Support\Facades\Auth;
 
 class TopicRequest extends Request
@@ -13,7 +14,8 @@ class TopicRequest extends Request
      */
     public function authorize()
     {
-        return $this->route('topic') ? true : Auth::check();
+        $topic = $this->route('topic');
+        return $topic ? $topic->user_id == Auth::id() : Auth::check();
     }
 
     /**

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh" ng-app="rixi">
+<html lang="zh" ng-app="rixiApp">
 <head>
     <meta charset="utf-8">
     <title>日系问答</title>

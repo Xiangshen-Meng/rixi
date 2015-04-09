@@ -25,7 +25,7 @@ class CreateTopicsTable extends Migration
 
         });
 
-        Schema::create('favorite', function (Blueprint $table) {
+        Schema::create('favorites', function (Blueprint $table) {
 
             $table->integer('user_id')->unsigned()->index();
             $table->integer('topic_id')->unsigned()->index();

@@ -7,9 +7,10 @@ class Topic extends Model
     protected $fillable = ['title', 'description'];
 
     /**
-     * The creater of the topic.
+     * The creator of the topic.
      *
      * @var User
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function author()
     {
@@ -17,12 +18,17 @@ class Topic extends Model
     }
 
     /**
-     * The followers of the topic.
+     * The users favorite the topic.
      *
-     * @return mixed
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function followers()
+    public function supporters()
     {
-        return $this->belongsToMany('App\User', 'favorite');
+        return $this->belongsToMany('App\User', 'favorites', 'topic_id', 'user_id')->withTimestamps();
+    }
+
+    public function countSupporters()
+    {
+        return \DB::table('favorites')->where('topic_id', $this->id)->count();
     }
 }

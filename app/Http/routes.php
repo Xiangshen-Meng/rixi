@@ -22,3 +22,5 @@ Route::controllers([
 ]);
 
 Route::resource('topic', 'TopicsController');
+
+Route::post('favorite', ['as' => 'favorite', 'uses' => 'FavoritesController@postFavorite']);

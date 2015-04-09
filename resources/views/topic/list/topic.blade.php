@@ -9,7 +9,7 @@
             </div>
             <div class="topic-meta">
                 <span class="span-padding-right">
-                    <span class="fui-heart icon-padding-right text-danger"></span> 7
+                    <span class="fa fa-heart-o icon-padding-right text-danger"></span> {{ $topic->countSupporters() }}
                 </span>
                 <span class="span-padding-right">
                     <span class="fui-chat icon-padding-right text-info"></span> 7
