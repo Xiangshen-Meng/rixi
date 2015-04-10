@@ -13,7 +13,7 @@ $("a.js-favorite-button")
     },
     success: ( data ) ->
       if data["status"] == "success"
-        $("#favorite-button-"+topic_id).html('<i class="fa fa-heart icon-padding-right text-danger"></i>')
+        $("#favorite-button-"+topic_id).replaceWith('<i class="fa fa-heart icon-padding-right text-danger"></i>')
         $("#favorites-num-"+topic_id).text(
           parseInt($("#favorites-num-"+topic_id).text(), 10) + 1
         )

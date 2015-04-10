@@ -16,4 +16,7 @@
             <span class="fui-user icon-padding-right"></span> <a href="">{{ $topic->author->name }}</a>
         </span>
     </div>
+
+    <div class="topic-comment">
+    </div>
 </div>

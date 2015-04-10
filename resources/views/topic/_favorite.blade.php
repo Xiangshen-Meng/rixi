@@ -7,5 +7,5 @@
         {{ $topic->countSupporters() }}
     </span>
 @else
-    <i class="fa fa-heart icon-padding-right text-danger"></i> {{ $topic->countSupporters() }}
+    <i class="fa fa-heart-o icon-padding-right text-danger"></i> {{ $topic->countSupporters() }}
 @endif
