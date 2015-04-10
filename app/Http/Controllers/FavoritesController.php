@@ -32,13 +32,9 @@ class FavoritesController extends Controller {
             $user->favorites()->attach([$topic_id]);
         }
 
-        // Return supporters number to update the view.
-        $topic = Topic::find($topic_id);
-
         return response()->json(
             [
                 'status' => 'success',
-                'count' => $topic->countSupporters(),
                 'message' => 'Favorite Success'
             ]
         );

@@ -18,7 +18,6 @@
 
 @yield('content')
 
-<script src="/js/vendor/angular.min.js"></script>
 <script src="/js/vendor/jquery.min.js"></script>
 <script src="/js/flat-ui-pro.js"></script>
 <script src="/js/vendor/application.js"></script>

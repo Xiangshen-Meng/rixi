@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-    @include('shared.topbar')
+    @include('shared._topbar')
     <div class="login-page">
         <div class="container-fluid">
             <div class="row">
@@ -15,7 +15,7 @@
                                 <img src="/images/hello.svg" height="300" class="center-block">
                             </div>
                             <div class="col-md-6">
-                                @include('auth.error_message')
+                                @include('auth._error_message')
 
                                 {!! Form::open(['url' => '/auth/login', 'class' => 'form-horizontal']) !!}
                                     {!! Form::hidden('remember', 'on') !!}

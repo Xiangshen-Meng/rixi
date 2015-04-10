@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-    @include('shared.topbar')
+    @include('shared._topbar')
     <div class="welcome-banner">
         <div class="container">
             <div class="col-md-6">
@@ -32,9 +32,9 @@
                 </div>
             </div>
 
-            @include('topic.list.topic', ['topics' => $topics])
+            @include('topic.list._topic', ['topics' => $topics])
 
         </div>
     </div>
-    @include('shared.footer')
+    @include('shared._footer')
 @endsection

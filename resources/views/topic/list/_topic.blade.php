@@ -9,7 +9,7 @@
             </div>
             <div class="topic-meta">
                 <span class="span-padding-right">
-                    <span class="fa fa-heart-o icon-padding-right text-danger"></span> {{ $topic->countSupporters() }}
+                    @include('topic._favorite')
                 </span>
                 <span class="span-padding-right">
                     <span class="fui-chat icon-padding-right text-info"></span> 7

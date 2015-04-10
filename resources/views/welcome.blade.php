@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-  @include('shared.topbar')
+  @include('shared._topbar')
   <div class="welcome-banner">
     <div class="container">
       <div class="col-md-6">
@@ -25,5 +25,5 @@
       <h4>等你来信哦</h4>
     </div>
   </div>
-  @include('shared.footer')
+  @include('shared._footer')
 @endsection

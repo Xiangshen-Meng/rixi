@@ -1,12 +1,12 @@
 @extends('app')
 
 @section('content')
-  @include('shared.topbar')
-  <div class="rixi-main" ng-controller="TopicController as topic">
+  @include('shared._topbar')
+  <div class="rixi-main">
     <div class="container">
-        @include('shared.message_bar')
-        @include('topic.topic')
+        @include('shared._message_bar')
+        @include('topic._topic')
     </div>
   </div>
-  @include('shared.footer')
+  @include('shared._footer')
 @endsection

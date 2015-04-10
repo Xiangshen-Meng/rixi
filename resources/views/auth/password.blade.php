@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-    @include('shared.topbar')
+    @include('shared._topbar')
     <div class="password-page">
         <div class="container-fluid">
             <div class="row">
@@ -18,7 +18,7 @@
                                     </div>
                                 @endif
 
-                                @include('auth.error_message')
+                                @include('auth._error_message')
 
                                 {!! Form::open(['url' => '/password/email', 'class' => 'form-horizontal']) !!}
 

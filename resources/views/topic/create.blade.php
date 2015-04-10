@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-    @include('shared.topbar')
+    @include('shared._topbar')
     <div class="rixi-main">
         <div class="container">
             <div class="form-header">
@@ -11,11 +11,11 @@
             </div>
             <div class="form-panel">
                 {!! Form::open(['action' => 'TopicsController@store']) !!}
-                    @include('topic.form', ['errors' => $errors])
+                    @include('topic._form', ['errors' => $errors])
                     {!! Form::submit('提交', ['class' => 'btn btn-submit']) !!}
                 {!! Form::close() !!}
             </div>
         </div>
     </div>
-    @include('shared.footer')
+    @include('shared._footer')
 @endsection
