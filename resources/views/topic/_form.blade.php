@@ -14,5 +14,5 @@
     {!! Form::textarea('description', old('description'), [
     'class' => 'form-control',
     'placeholder' => '描述',
-    'row' => '7']) !!}
+    'rows' => '10']) !!}
 </div>

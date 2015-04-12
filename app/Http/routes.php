@@ -22,5 +22,6 @@ Route::controllers([
 ]);
 
 Route::resource('topic', 'TopicsController');
+Route::resource('comment', 'CommentsController', ['only' => ['store', 'update', 'destroy']]);
 
 Route::post('favorite', ['as' => 'favorite', 'uses' => 'FavoritesController@postFavorite']);

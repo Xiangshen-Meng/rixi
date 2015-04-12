@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use App\Http\Requests\TopicRequest;
 use App\Topic;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -12,6 +13,7 @@ class TopicsController extends Controller
 {
     function __construct()
     {
+        Carbon::setLocale('zh');
         $this->middleware('auth', ['except' => ['index', 'show']]);
     }
 
@@ -56,7 +58,8 @@ class TopicsController extends Controller
      */
     public function show($topic)
     {
-        return view('topic.show', compact('topic'));
+        $comments = $topic->comments()->with('user')->get();
+        return view('topic.show', compact('topic', 'comments'));
     }
 
     /**

@@ -44,6 +44,16 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     }
 
     /**
+     * All comments user created.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
+
+    /**
      * Return all the favorite topics
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany

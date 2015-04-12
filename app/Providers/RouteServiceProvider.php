@@ -25,6 +25,7 @@ class RouteServiceProvider extends ServiceProvider {
 		parent::boot($router);
 
         $router->model('topic', 'App\Topic');
+        $router->model('comment', 'App\Comment');
 	}
 
 	/**

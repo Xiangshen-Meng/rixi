@@ -12,10 +12,10 @@
                     @include('topic._favorite')
                 </span>
                 <span class="span-padding-right">
-                    <span class="fui-chat icon-padding-right text-info"></span> 7
+                    <i class="fa fa-comments icon-padding-right text-info"></i> {{ $topic->comments->count() }}
                 </span>
                 <span class="pull-right" style="font-size:15px">
-                    By <a href="">{{ $topic->author->name }}</a>
+                    By <span class="text-primary">{{ $topic->author->name }}</span>
                 </span>
             </div>
         </div>

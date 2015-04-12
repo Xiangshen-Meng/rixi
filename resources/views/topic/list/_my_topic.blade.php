@@ -9,10 +9,10 @@
             </div>
             <div class="topic-meta">
                 <span class="span-padding-right">
-                    <span class="fui-heart icon-padding-right text-danger"></span> 7
+                    <i class="fa fa-heart icon-padding-right text-danger"></i> {{ $topic->countSupporters() }}
                 </span>
                 <span class="span-padding-right">
-                    <span class="fui-chat icon-padding-right text-info"></span> 7
+                    <i class="fa fa-comments icon-padding-right text-info"></i> {{ $topic->comments->count() }}
                 </span>
                 <span class="pull-right">
                     <a href="{{ route('topic.edit', $topic) }}" type="button">编辑</a>
