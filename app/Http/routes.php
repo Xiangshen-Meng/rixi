@@ -26,4 +26,5 @@ Route::controllers([
 Route::resource('topic', 'TopicsController');
 Route::resource('comment', 'CommentsController', ['only' => ['store', 'update', 'destroy']]);
 
-Route::post('favorite', ['as' => 'favorite', 'uses' => 'FavoritesController@postFavorite']);
+Route::post('favorite', ['as' => 'favorite', 'uses' => 'ApiController@postFavorite']);
+Route::post('vote', ['as' => 'vote', 'uses' => 'ApiController@postVote']);

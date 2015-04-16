@@ -5,7 +5,7 @@
                 <a href="{{ route('topic.show', $topic) }}">{{ $topic->title }}</a>
             </div>
             <div class="topic-description">
-                {{ $topic->description }}
+                {{ str_limit($topic->description, 30) }}
             </div>
             <div class="topic-meta">
                 <span class="span-padding-right">

@@ -7,8 +7,8 @@
             <i class="fa fa-heart-o icon-padding-right text-danger"></i>
         </a>
         <span id="favorites-num-{{ $topic->id }}">
-        {{ $topic->countSupporters() }}
-    </span>
+            {{ $topic->countSupporters() }}
+        </span>
     @endif
 @else
     <i class="fa fa-heart-o icon-padding-right text-danger"></i> {{ $topic->countSupporters() }}

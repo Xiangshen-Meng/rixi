@@ -35,4 +35,20 @@ class AuthController extends Controller {
 		$this->middleware('guest', ['except' => 'getLogout']);
 	}
 
+    protected function getFailedLoginMessage()
+    {
+        return '您输入的用户名或密码错误';
+    }
+
+    /**
+     * Get the post register / login redirect path.
+     *
+     * @return string
+     */
+    public function redirectPath()
+    {
+
+        return property_exists($this, 'redirectTo') ? $this->redirectTo : '/';
+    }
+
 }

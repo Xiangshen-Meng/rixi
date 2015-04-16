@@ -7,7 +7,10 @@
             <span class="comment-time">{{ $comment->humanCreatedTime() }}</span>
         </div>
         <div class="comment-content">
-            {{ $comment->content }}
+            {!! nl2br(e($comment->content)) !!}
+        </div>
+        <div class="comment-support">
+            @include('topic.comments._vote')
         </div>
     </div>
 @empty

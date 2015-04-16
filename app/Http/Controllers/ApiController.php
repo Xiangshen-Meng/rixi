@@ -7,7 +7,7 @@ use App\Topic;
 use Auth;
 use Illuminate\Http\Request;
 
-class FavoritesController extends Controller {
+class ApiController extends Controller {
 
     /**
      * Add Auth middleware.
@@ -40,4 +40,20 @@ class FavoritesController extends Controller {
         );
     }
 
+    public function postVote(Request $request)
+    {
+        $user = Auth::user();
+        $comment_id = $request->get('comment_id');
+
+        if (!$user->hasVote($comment_id)) {
+            $user->votes()->attach([$comment_id]);
+        }
+
+        return response()->json(
+            [
+                'status' => 'success',
+                'message' => 'Vote Success'
+            ]
+        );
+    }
 }

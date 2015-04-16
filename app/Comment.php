@@ -27,8 +27,33 @@ class Comment extends Model {
         return $this->belongsTo('App\Topic');
     }
 
+    /**
+     * Return human readable time.
+     *
+     * @return mixed
+     */
     public function humanCreatedTime()
     {
         return $this->created_at->diffForHumans();
+    }
+
+    /**
+     * Return the users who voted this comment.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function voters()
+    {
+        return $this->belongsToMany('App\User', 'votes', 'comment_id', 'user_id')->withTimestamps();
+    }
+
+    /**
+     * Return the number of voter(vote).
+     *
+     * @return mixed
+     */
+    public function countVoters()
+    {
+        return \DB::table('votes')->where('comment_id', $this->id)->count();
     }
 }

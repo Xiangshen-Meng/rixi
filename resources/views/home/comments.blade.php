@@ -13,7 +13,7 @@
                 <div class="home-page-title">
                     <h2>我的评论</h2>
                 </div>
-                @include('topic.list._my_comments', ['comments' => $comments])
+                @include('topic.comments._my_comments', ['comments' => $comments])
             </div>
         </div>
     </div>

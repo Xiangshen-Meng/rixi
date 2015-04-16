@@ -2,7 +2,7 @@
 
 @section('content')
     @include('shared._topbar')
-    <div class="register-page">
+    <div class="auth-page">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
@@ -11,10 +11,10 @@
                             <div class="rixi-panel-title">
                                 注册
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <img src="/images/rixi/computer.png" height="300" class="center-block">
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 @include('auth._error_message')
 
                                 {!! Form::open(['url' => '/auth/register', 'class' => 'form-horizontal']) !!}

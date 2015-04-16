@@ -19,3 +19,25 @@ $("a.js-favorite-button")
         )
   })
 )
+
+$("a.js-vote-button")
+.click((event) ->
+  event.preventDefault()
+  comment_id = $(this).data("comment-id")
+  token = $(this).data("token")
+
+  $.ajax({
+    type: "POST",
+    url: '/vote',
+    data: {
+      _token: token
+      comment_id: comment_id,
+    },
+    success: ( data ) ->
+      if data["status"] == "success"
+        $("#vote-button-"+comment_id).replaceWith('<i class="fa fa-thumbs-o-up icon-padding-right text-danger"></i>')
+        $("#votes-num-"+comment_id).text(
+          parseInt($("#votes-num-"+comment_id).text(), 10) + 1
+        )
+  })
+)

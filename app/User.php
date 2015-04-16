@@ -66,6 +66,16 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     }
 
     /**
+     * Return all the comments user voted.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function votes()
+    {
+        return $this->belongsToMany('App\Comment', 'votes', 'user_id', 'comment_id')->withTimestamps();
+    }
+
+    /**
      * Check whether favorite topic.
      *
      * @param $topic_id
@@ -76,6 +86,10 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return DB::table('favorites')->where('user_id', $this->id)->where('topic_id', $topic_id)->first();
     }
 
+    public function hasVote($comment_id)
+    {
+        return DB::table('votes')->where('user_id', $this->id)->where('comment_id', $comment_id)->first();
+    }
     /**
      * Get user avatar name, return DEFAULT_AVATAR if null
      * @return mixed|string

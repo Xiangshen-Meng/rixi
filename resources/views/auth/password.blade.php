@@ -2,7 +2,7 @@
 
 @section('content')
     @include('shared._topbar')
-    <div class="password-page">
+    <div class="auth-page">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
@@ -23,12 +23,12 @@
                                 {!! Form::open(['url' => '/password/email', 'class' => 'form-horizontal']) !!}
 
                                 <div class="form-group">
-                                    {!! Form::label('email', '邮箱', ['class' => 'col-sm-2 col-lg-2 col-lg-offset-2 control-label']) !!}
+                                    {!! Form::label('email', '邮箱', ['class' => 'col-sm-3 control-label']) !!}
 
-                                    <div class="col-sm-6 col-lg-4">
+                                    <div class="col-sm-6 col-lg-6">
                                         {!! Form::email('email', old('email'), ['class' => 'form-control']) !!}
                                     </div>
-                                    <div class="col-sm-4 hidden-xs">
+                                    <div class="col-sm-3 hidden-xs">
                                         <button type="submit" class="btn btn-primary">
                                             发送验证到邮箱
                                         </button>

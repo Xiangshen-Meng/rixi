@@ -21,6 +21,15 @@ class CreateCommentsTable extends Migration {
             $table->text('content');
 			$table->timestamps();
 		});
+
+        Schema::create('votes', function (Blueprint $table) {
+
+            $table->integer('user_id')->unsigned()->index();
+            $table->integer('comment_id')->unsigned()->index();
+
+            $table->timestamps();
+
+        });
 	}
 
 	/**
@@ -31,6 +40,7 @@ class CreateCommentsTable extends Migration {
 	public function down()
 	{
 		Schema::drop('comments');
+        Schema::drop('votes');
 	}
 
 }

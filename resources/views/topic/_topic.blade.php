@@ -3,7 +3,7 @@
         <h1>{{ $topic->title }}</h1>
     </div>
     <div class="topic-description">
-        <p>{{ $topic->description }}</p>
+        <p>{!! nl2br(e($topic->description)) !!}</p>
     </div>
     <div class="topic-meta">
         <span class="span-padding-right">
@@ -22,6 +22,6 @@
         <div class="block-header">
             <h2>所有评论</h2>
         </div>
-        @include('topic.list._comments')
+        @include('topic.comments._comments')
     </div>
 </div>
