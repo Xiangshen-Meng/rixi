@@ -14,8 +14,9 @@
                 <span class="span-padding-right">
                     <i class="fa fa-comments icon-padding-right text-info"></i> {{ $topic->comments->count() }}
                 </span>
-                <span class="pull-right" style="font-size:15px">
-                    By <span class="text-primary">{{ $topic->author->name }}</span>
+                <span class="span-padding-right" style="font-size:15px">
+                    <img src="/images/avatar/{{ $topic->author->getAvatarName() }}" />
+                    <span class="text-primary">{{ $topic->author->name }}</span>
                 </span>
             </div>
         </div>

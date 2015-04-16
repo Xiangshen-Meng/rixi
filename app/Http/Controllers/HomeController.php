@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,18 +25,30 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        Carbon::setLocale('zh');
         $this->middleware('auth');
     }
 
     /**
-     * Show the application dashboard to the user.
+     * Show comments of the user.
      *
      * @return Response
      */
-    public function index()
+    public function comments()
+    {
+        $comments = Auth::user()->comments;
+        return view('home.comments', compact('comments'));
+    }
+
+    /**
+     * Show topics of the user.
+     *
+     * @return Response
+     */
+    public function topics()
     {
         $topics = Auth::user()->topics;
-        return view('home.index', compact('topics'));
+        return view('home.topics', compact('topics'));
     }
 
     /**

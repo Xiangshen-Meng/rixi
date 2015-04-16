@@ -1,6 +1,7 @@
 @forelse ( $comments as $comment)
     <div class="comment">
         <div class="comment-meta">
+            <span><img src="/images/avatar/{{ $comment->user->getAvatarName() }}" /></span>
             <span class="text-primary">{{ $comment->user->name }}</span>
             <span class="divider"></span>
             <span class="comment-time">{{ $comment->humanCreatedTime() }}</span>

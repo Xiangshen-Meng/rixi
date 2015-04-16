@@ -27,6 +27,15 @@
 
                     {!! Form::submit('更新', ['class' => 'btn btn-add']) !!}
                 {!! Form::close() !!}
+
+                <div class="home-page-title" style="padding-top: 50px">
+                    <h2>换个账号</h2>
+                </div>
+                <div>
+                    <a href="{{ url('/auth/logout') }}" class="btn btn-danger">
+                        退出登录
+                    </a>
+                </div>
             </div>
         </div>
     </div>
