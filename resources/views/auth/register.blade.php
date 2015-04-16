@@ -12,7 +12,7 @@
                                 注册
                             </div>
                             <div class="col-md-6">
-                                <img src="/images/computer.svg" height="300" class="center-block">
+                                <img src="/images/rixi/computer.png" height="300" class="center-block">
                             </div>
                             <div class="col-md-6">
                                 @include('auth._error_message')

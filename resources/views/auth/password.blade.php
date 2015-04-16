@@ -44,7 +44,7 @@
                             </div>
 
                             <div class="col-md-12">
-                                <img src="/images/mail.svg" height="300" class="center-block">
+                                <img src="/images/rixi/mail.png" height="300" class="center-block">
                             </div>
                         </div>
                     </div>

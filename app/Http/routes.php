@@ -15,6 +15,7 @@ Route::get('/', 'TopicsController@index');
 
 Route::get('home', ['as' => 'home', 'uses' => 'HomeController@index']);
 Route::get('setting', ['as' => 'setting', 'uses' => 'HomeController@setting']);
+Route::post('user', 'HomeController@updateUser');
 
 Route::controllers([
     'auth' => 'Auth\AuthController',

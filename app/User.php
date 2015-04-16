@@ -10,6 +10,8 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract
 {
 
+    const DEFAULT_AVATAR = 'avatar0.png';
+
     use Authenticatable, CanResetPassword;
 
     /**
@@ -72,5 +74,13 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public function hasFavorite($topic_id)
     {
         return DB::table('favorites')->where('user_id', $this->id)->where('topic_id', $topic_id)->first();
+    }
+
+    /**
+     * Get user avatar name, return DEFAULT_AVATAR if null
+     * @return mixed|string
+     */
+    public function getAvatarName(){
+        return $this->avatar ? $this->avatar : self::DEFAULT_AVATAR;
     }
 }

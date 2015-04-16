@@ -24,7 +24,7 @@
               @else
                 <li>
                   <a href="{{ url('/home') }}">
-                    <span class="fui-user icon-padding-right"></span> {{ Auth::user()->name }}
+                      <img src="/images/avatar/{{ \Auth::user()->getAvatarName() }}" width=50 /> {{ Auth::user()->name }}
                   </a>
                 </li>
                 <li class="divider"></li>

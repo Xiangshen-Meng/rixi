@@ -15,4 +15,5 @@
         </div>
     </div>
 
+    @include('shared._footer')
 @endsection

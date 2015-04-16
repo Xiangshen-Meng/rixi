@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -44,7 +45,21 @@ class HomeController extends Controller
      */
     public function setting()
     {
-        return view('home.setting');
+        return view('home.setting')->with(['avatar' => Auth::user()->getAvatarName()]);
     }
 
+    /**
+     * Update current user avatar.
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function updateUser(Request $request)
+    {
+        $user = Auth::user();
+        $user->avatar = $request->get('avatar');
+        $user->save();
+
+        return redirect('/setting')->with('message', '已经更新啦！去看看吧');
+    }
 }

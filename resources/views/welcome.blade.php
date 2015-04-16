@@ -5,7 +5,7 @@
   <div class="welcome-banner">
     <div class="container">
       <div class="col-md-6">
-        <img src="/images/sushi.svg" height="400" class="center-block">
+        <img src="/images/rixi/sushi.png" height="400" class="center-block">
       </div>
 
       <div class="col-md-6">
