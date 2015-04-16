@@ -2,7 +2,7 @@
 
 @section('content')
     @include('shared._topbar')
-    <div class="login-page">
+    <div class="auth-page">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
