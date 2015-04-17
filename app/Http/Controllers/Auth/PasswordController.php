@@ -22,6 +22,8 @@ class PasswordController extends Controller {
 
     protected $redirectPath = '/';
 
+    protected $subject = '找回密码－日系问答';
+
 	/**
 	 * Create a new password controller instance.
 	 *

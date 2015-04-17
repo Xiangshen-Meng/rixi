@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => 'support@rixi.me', 'name' => 'Rixi'],
+	'from' => ['address' => 'support@rixi.me', 'name' => '日系工作室'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return [
 	|
 	*/
 
-	'encryption' => 'tls',
+	'encryption' => env('MAIL_ENCRYPTION', 'tls'),
 
 	/*
 	|--------------------------------------------------------------------------
