@@ -16,6 +16,7 @@
 </head>
 <body>
 
+@include('shared._tag')
 @yield('content')
 
 <script src="/js/vendor/jquery.min.js"></script>
