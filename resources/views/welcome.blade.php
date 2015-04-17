@@ -4,9 +4,12 @@
   @include('shared._topbar')
   <div class="welcome-banner">
     <div class="container">
-      <div class="col-md-6">
-        <img src="/images/rixi/sushi.png" height="400" class="center-block">
-      </div>
+        <div class="hidden-xs col-md-6">
+            <img src="/images/rixi/sushi.png" height="400" class="center-block">
+        </div>
+        <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+            <img src="/images/rixi/sushi.png" height="300" class="center-block">
+        </div>
 
       <div class="col-md-6">
         <div class="welcome-banner-text">
