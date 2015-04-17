@@ -4,6 +4,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class AuthController extends Controller {
 
@@ -35,6 +37,44 @@ class AuthController extends Controller {
 		$this->middleware('guest', ['except' => 'getLogout']);
 	}
 
+
+    protected function sendRegisterMail($user_email)
+    {
+        $data = [
+            'users_num' => \App\User::all()->count()
+        ];
+
+        Mail::queue('emails.register', $data, function($message) use ($user_email)
+        {
+            $message->to($user_email)->subject('感谢您的注册！－日系问答');
+        });
+    }
+
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function postRegister(Request $request)
+    {
+        $validator = $this->registrar->validator($request->all());
+
+        if ($validator->fails())
+        {
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+
+        $this->auth->login($this->registrar->create($request->all()));
+
+        // Send register Email to User
+        $this->sendRegisterMail($this->auth->user()->email);
+
+        return redirect($this->redirectPath());
+    }
+
     protected function getFailedLoginMessage()
     {
         return '您输入的用户名或密码错误';
@@ -47,7 +87,6 @@ class AuthController extends Controller {
      */
     public function redirectPath()
     {
-
         return property_exists($this, 'redirectTo') ? $this->redirectTo : '/';
     }
 
