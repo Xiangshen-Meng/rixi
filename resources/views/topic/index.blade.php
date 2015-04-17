@@ -2,6 +2,7 @@
 
 @section('content')
     @include('shared._topbar')
+    @include('auth._register_messages')
     <div class="welcome-banner">
         <div class="container">
             <div class="hidden-xs col-md-6">

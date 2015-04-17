@@ -72,7 +72,7 @@ class AuthController extends Controller {
         // Send register Email to User
         $this->sendRegisterMail($this->auth->user()->email);
 
-        return redirect($this->redirectPath());
+        return redirect($this->redirectPath())->with('register_message', \App\User::all()->count());
     }
 
     protected function getFailedLoginMessage()
