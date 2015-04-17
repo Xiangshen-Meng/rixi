@@ -1,5 +1,10 @@
 <div class="home-sidebar">
     <div class="sidebar-element">
+        <a href="{{ url('/') }}">
+            <img src="/images/icons/browser.png" width="50" class="icon-lg-padding-right"/>话题中心
+        </a>
+    </div>
+    <div class="sidebar-element">
         <a href="{{ route('topic.create') }}">
             <img src="/images/icons/pencil.png" width="50" class="icon-lg-padding-right"/>新建话题
         </a>
