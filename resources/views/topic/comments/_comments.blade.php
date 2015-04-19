@@ -5,12 +5,13 @@
             <span class="text-primary">{{ $comment->user->name }}</span>
             <span class="divider"></span>
             <span class="comment-time">{{ $comment->humanCreatedTime() }}</span>
+            <span class="divider"></span>
+            <span class="comment-support">
+                @include('topic.comments._vote')
+            </span>
         </div>
         <div class="comment-content">
-            {!! nl2br(e($comment->content)) !!}
-        </div>
-        <div class="comment-support">
-            @include('topic.comments._vote')
+            {!! html_entity_decode($comment->content) !!}
         </div>
     </div>
 @empty
@@ -22,7 +23,7 @@
         {!! Form::open(['action' => 'CommentsController@store', 'class' => 'form-horizontal']) !!}
         {!! Form::hidden('topic_id', $topic->id) !!}
         <div style="padding-bottom: 30px">
-            {!! Form::textarea('content', null, ['class' => 'form-control ckeditor', 'placeholder' => '我来说说', 'rows' => '4']) !!}
+            {!! Form::textarea('content', null, ['class' => 'form-control ckeditor', 'rows' => '4']) !!}
         </div>
         {!! Form::submit('评论', ['class' => 'btn btn-add pull-right']) !!}
         {!! Form::close() !!}
