@@ -22,7 +22,7 @@
         {!! Form::open(['action' => 'CommentsController@store', 'class' => 'form-horizontal']) !!}
         {!! Form::hidden('topic_id', $topic->id) !!}
         <div style="padding-bottom: 30px">
-            {!! Form::textarea('content', null, ['class' => 'form-control', 'placeholder' => '我来说说', 'rows' => '4']) !!}
+            {!! Form::textarea('content', null, ['class' => 'form-control ckeditor', 'placeholder' => '我来说说', 'rows' => '4']) !!}
         </div>
         {!! Form::submit('评论', ['class' => 'btn btn-add pull-right']) !!}
         {!! Form::close() !!}
@@ -34,3 +34,4 @@
         </a>
     </p>
 @endif
+

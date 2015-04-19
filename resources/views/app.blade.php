@@ -21,6 +21,7 @@
 
 <script src="/js/vendor/jquery.min.js"></script>
 <script src="/js/flat-ui-pro.js"></script>
+<script src="/js/vendor/ckeditor/ckeditor.js"></script>
 <script src="{{ elixir("js/app.js") }}"></script>
 
 </body>
