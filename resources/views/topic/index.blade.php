@@ -16,11 +16,11 @@
 
             <div class="col-md-6">
                 <div class="welcome-banner-text">
-                    <h3>关于日本你想知道什么？</h3>
+                    <h1>关于日本你想知道什么？</h1>
 
                     <div class="welcome-banner-text-content">
-                        服装？料理？化妆品？文化？关于日本，把想知道的一切都告诉我们吧！
-                        我们会尽快的整理出资料通知您的～
+                        <h3>服装？料理？化妆品？文化？关于日本，把想知道的一切都告诉我们吧！
+                        我们会尽快的整理出资料通知您的～</h3>
                     </div>
                 </div>
             </div>

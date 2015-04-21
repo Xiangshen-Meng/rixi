@@ -2,10 +2,10 @@
     @forelse($topics as $topic)
         <div class="topic">
             <div class="topic-title">
-                <a href="{{ route('topic.show', $topic) }}">{{ $topic->title }}</a>
+                <h2><a href="{{ route('topic.show', $topic) }}">{{ $topic->title }}</a></h2>
             </div>
             <div class="topic-description">
-                {{ str_limit($topic->description, 30) }}
+                <h3>{{ str_limit($topic->description, 30) }}</h3>
             </div>
             <div class="topic-meta">
                 <span class="span-padding-right">

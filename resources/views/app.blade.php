@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>@yield('title') - 日系问答</title>
+    <meta name="description" content="帮助解答关于日本的一切问题，日系化妆、日系搭配、日系发型，您想知道的就是我们想提供的。">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="{{ elixir("css/app.css") }}" rel="stylesheet">

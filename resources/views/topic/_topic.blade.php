@@ -3,7 +3,7 @@
         <h1>{{ $topic->title }}</h1>
     </div>
     <div class="topic-description">
-        <p>{!! nl2br(e($topic->description)) !!}</p>
+        <h2>{!! nl2br(e($topic->description)) !!}</h2>
     </div>
     <div class="topic-meta">
         <span class="span-padding-right">
