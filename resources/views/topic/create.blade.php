@@ -1,5 +1,7 @@
 @extends('app')
 
+@section('title', '新建话题')
+
 @section('content')
     @include('shared._topbar')
     <div class="rixi-main">

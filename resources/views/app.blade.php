@@ -2,7 +2,7 @@
 <html lang="zh" ng-app="rixiApp">
 <head>
     <meta charset="utf-8">
-    <title>日系问答</title>
+    <title>@yield('title') - 日系问答</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="{{ elixir("css/app.css") }}" rel="stylesheet">

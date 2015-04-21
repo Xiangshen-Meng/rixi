@@ -1,5 +1,7 @@
 @extends('app')
 
+@section('title', '我的评论')
+
 @section('content')
     @include('shared._topbar')
 

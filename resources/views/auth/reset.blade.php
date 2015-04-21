@@ -1,5 +1,7 @@
 @extends('app')
 
+@section('title', '重置密码')
+
 @section('content')
     @include('shared._topbar')
     <div class="auth-page">
