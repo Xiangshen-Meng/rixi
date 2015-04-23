@@ -2,6 +2,10 @@
 
 @section('title', $topic->title)
 
+@section('custom_header')
+    @include('UEditor::head');
+@endsection
+
 @section('content')
   @include('shared._topbar')
   <div class="rixi-main">

@@ -137,6 +137,7 @@ return [
 		'Illuminate\View\ViewServiceProvider',
         'Illuminate\Html\HtmlServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
+        'Stevenyangecho\UEditor\UEditorServiceProvider',
 
 		/*
 		 * Application Service Providers...

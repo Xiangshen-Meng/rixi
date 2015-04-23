@@ -22,12 +22,15 @@
     <div class="comment-form">
         {!! Form::open(['action' => 'CommentsController@store', 'class' => 'form-horizontal']) !!}
         {!! Form::hidden('topic_id', $topic->id) !!}
-        <div style="padding-bottom: 30px">
-            {!! Form::textarea('content', null, ['class' => 'form-control ckeditor', 'rows' => '4']) !!}
-        </div>
+        
+        <div id="rixi-editor" name="content"></div>
+        @include('shared._ueditor')
+
         {!! Form::submit('评论', ['class' => 'btn btn-add pull-right']) !!}
         {!! Form::close() !!}
     </div>
+
+
 @else
     <p style="padding-top: 20px">
         <a href="{{ url('auth/login') }}" class="btn btn-primary">
@@ -35,4 +38,3 @@
         </a>
     </p>
 @endif
-
