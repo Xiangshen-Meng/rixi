@@ -3,7 +3,7 @@
 @section('title', $topic->title)
 
 @section('custom_header')
-    @include('UEditor::head');
+    @include('UEditor::head')
 @endsection
 
 @section('content')

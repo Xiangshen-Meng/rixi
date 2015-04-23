@@ -22,7 +22,7 @@
     <div class="comment-form">
         {!! Form::open(['action' => 'CommentsController@store', 'class' => 'form-horizontal']) !!}
         {!! Form::hidden('topic_id', $topic->id) !!}
-        
+
         <div id="rixi-editor" name="content"></div>
         @include('shared._ueditor')
 
