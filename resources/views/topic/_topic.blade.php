@@ -1,6 +1,11 @@
 <div class="topic-panel">
     <div class="topic-title">
-        <h1>{{ $topic->title }}</h1>
+        <h1>
+            {{ $topic->title }}
+            <span>
+                <a href="{{ url('/') }}"><i class="fa fa-reply"></i> 回到主页</a>
+            </span>
+        </h1>
     </div>
     <div class="topic-description">
         <h2>{!! nl2br(e($topic->description)) !!}</h2>
