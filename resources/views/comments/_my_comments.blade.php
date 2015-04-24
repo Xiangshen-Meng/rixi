@@ -6,7 +6,7 @@
             <span class="comment-time">{{ $comment->humanCreatedTime() }}</span>
         </div>
         <div class="comment-content">
-            {{ str_limit(strip_tags($comment->content, 30)) }}
+            {{ str_limit($comment->noFormatContent(), 30) }}
         </div>
     </div>
 @empty

@@ -1,3 +1,5 @@
+@import "../variables";
+
 .js-vote-button {
   color: #7F8C8D;
 
@@ -90,10 +92,35 @@
   }
 
   .topic-comment {
-    margin-top: 50px;
+    margin-top: 40px;
 
     .block-header {
       border: none;
+    }
+  }
+
+  .topic-matome {
+    margin-top: 40px;
+
+    .matome-list {
+      margin-top: 10px;
+
+      .matome {
+        padding-bottom: 3px;
+
+        h3 {
+          margin: 0;
+          a {
+            color: @wet-asphalt;
+            font-size: 16px;
+
+            &:hover, &:focus, &:active {
+              color: @midnight-blue;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -146,4 +173,8 @@
 }
 
 .comment-form {
+  .new-matome-link {
+    font-size: 15px;
+    padding: 15px 12px 0;
+  }
 }

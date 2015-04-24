@@ -56,6 +56,16 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     }
 
     /**
+     * All matomes user created.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function matomes()
+    {
+        return $this->hasMany('App\Matome');
+    }
+
+    /**
      * Return all the favorite topics
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
@@ -86,6 +96,12 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return DB::table('favorites')->where('user_id', $this->id)->where('topic_id', $topic_id)->first();
     }
 
+    /**
+     * Check whether favorite comment.
+     *
+     * @param $comment_id
+     * @return mixed
+     */
     public function hasVote($comment_id)
     {
         return DB::table('votes')->where('user_id', $this->id)->where('comment_id', $comment_id)->first();

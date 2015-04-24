@@ -46,4 +46,14 @@ class Topic extends Model
     {
         return $this->hasMany('App\Comment');
     }
+
+    /**
+     * Return the matomes belongs to this topic.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function matomes()
+    {
+        return $this->hasMany('App\Matome');
+    }
 }

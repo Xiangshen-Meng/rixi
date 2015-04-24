@@ -24,7 +24,7 @@ return [
         'qiniu'=>[
             'accessKey'=>   env('QINIU_KEY'),
             'secretKey'=>   env('QINIU_SECRET'),
-            'bucket'=>      'rixi',
+            'bucket'=>      env('QINIU_BUCKET'),
             'url'=>         env('QINIU_URL'),
 
         ]

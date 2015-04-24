@@ -7,7 +7,7 @@
             <span class="comment-time">{{ $comment->humanCreatedTime() }}</span>
             <span class="divider"></span>
             <span class="comment-support">
-                @include('topic.comments._vote')
+                @include('comments._vote')
             </span>
         </div>
         <div class="comment-content">
@@ -27,6 +27,10 @@
         @include('shared._ueditor')
 
         {!! Form::submit('评论', ['class' => 'btn btn-add pull-right']) !!}
+
+        <a href="{{ route('matome.create', ['topic_id' => $topic->id]) }}" class="new-matome-link pull-right">
+            想说的太多？发个整理帖吧
+        </a>
         {!! Form::close() !!}
     </div>
 

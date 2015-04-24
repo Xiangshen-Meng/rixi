@@ -56,4 +56,14 @@ class Comment extends Model {
     {
         return \DB::table('votes')->where('comment_id', $this->id)->count();
     }
+
+    /**
+     * Return no format content.
+     *
+     * @return string
+     */
+    public function noFormatContent()
+    {
+        return strip_tags($this->content);
+    }
 }

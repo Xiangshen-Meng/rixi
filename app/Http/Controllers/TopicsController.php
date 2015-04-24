@@ -59,7 +59,8 @@ class TopicsController extends Controller
     public function show($topic)
     {
         $comments = $topic->comments()->with('user')->get();
-        return view('topic.show', compact('topic', 'comments'));
+        $matomes = $topic->matomes()->with('user')->get();
+        return view('topic.show', compact('topic', 'comments', 'matomes'));
     }
 
     /**

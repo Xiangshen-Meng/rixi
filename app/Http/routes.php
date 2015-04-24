@@ -25,6 +25,7 @@ Route::controllers([
 
 Route::resource('topic', 'TopicsController');
 Route::resource('comment', 'CommentsController', ['only' => ['store', 'update', 'destroy']]);
+Route::resource('matome', 'MatomesController',  ['except' => ['index']]);
 
 Route::post('favorite', ['as' => 'favorite', 'uses' => 'ApiController@postFavorite']);
 Route::post('vote', ['as' => 'vote', 'uses' => 'ApiController@postVote']);

@@ -18,10 +18,17 @@
         </span>
     </div>
 
+    <div class="topic-matome">
+        <div class="block-header">
+            <h2>整理帖</h2>
+        </div>
+        @include('topic.list._matome')
+    </div>
+
     <div class="topic-comment">
         <div class="block-header">
             <h2>所有评论</h2>
         </div>
-        @include('topic.comments._comments')
+        @include('comments._comments')
     </div>
 </div>

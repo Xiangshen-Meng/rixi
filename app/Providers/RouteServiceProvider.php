@@ -26,6 +26,7 @@ class RouteServiceProvider extends ServiceProvider {
 
         $router->model('topic', 'App\Topic');
         $router->model('comment', 'App\Comment');
+        $router->model('matome', 'App\Matome');
 	}
 
 	/**
