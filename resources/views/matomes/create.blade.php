@@ -18,7 +18,7 @@
             </div>
             <div class="form-panel">
                 {!! Form::open(['action' => 'MatomesController@store']) !!}
-                @include('matomes._form', ['errors' => $errors])
+                @include('matomes._create_form', ['errors' => $errors])
                 {!! Form::submit('提交', ['class' => 'btn btn-add pull-right']) !!}
                 {!! Form::close() !!}
             </div>

@@ -18,7 +18,7 @@
             </div>
             <div class="form-panel">
                 {!! Form::model($matome, ['route' => ['matome.update', $matome], 'method' => 'PUT']) !!}
-                @include('matomes._form', ['errors' => $errors])
+                @include('matomes._edit_form', ['errors' => $errors])
                 {!! Form::submit('更新', ['class' => 'btn btn-add pull-right']) !!}
                 {!! Form::close() !!}
             </div>
