@@ -51,6 +51,12 @@ class HomeController extends Controller
         return view('home.topics', compact('topics'));
     }
 
+    public function matomes()
+    {
+        $matomes = Auth::user()->matomes;
+        return view('home.matomes', compact('matomes'));
+    }
+
     /**
      * Show the application setting to the user.
      *

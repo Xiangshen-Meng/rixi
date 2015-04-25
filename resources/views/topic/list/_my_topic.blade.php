@@ -15,7 +15,7 @@
                     <i class="fa fa-comments icon-padding-right text-info"></i> {{ $topic->comments->count() }}
                 </span>
                 <span class="pull-right">
-                    <a href="{{ route('topic.edit', $topic) }}" type="button">编辑</a>
+                    <a href="{{ route('topic.edit', $topic) }}" type="button" style="font-size: 15px">编辑</a>
                 </span>
             </div>
         </div>

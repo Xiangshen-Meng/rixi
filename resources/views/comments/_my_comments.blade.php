@@ -4,6 +4,11 @@
             <span><a href="{{ route('topic.show', $comment->topic) }}">{{ $comment->topic->title }}</a></span>
             <span class="divider"></span>
             <span class="comment-time">{{ $comment->humanCreatedTime() }}</span>
+            <span class="pull-right">
+                {!! Form::open(['route' => ['comment.destroy', $comment], 'method' => 'delete']) !!}
+                    <button type="submit" class="btn btn-danger btn-xs">删除</button>
+                {!! Form::close() !!}
+            </span>
         </div>
         <div class="comment-content">
             {{ str_limit($comment->noFormatContent(), 30) }}

@@ -15,6 +15,7 @@ Route::get('/', 'TopicsController@index');
 
 Route::get('home/topics', ['as' => 'my_topics', 'uses' => 'HomeController@topics']);
 Route::get('home/comments', ['as' => 'my_comments', 'uses' => 'HomeController@comments']);
+Route::get('home/matomes', ['as' => 'my_matomes', 'uses' => 'HomeController@matomes']);
 Route::get('setting', ['as' => 'setting', 'uses' => 'HomeController@setting']);
 Route::post('user', 'HomeController@updateUser');
 

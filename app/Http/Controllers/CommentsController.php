@@ -84,9 +84,11 @@ class CommentsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy($comment)
 	{
-		//
+        $comment->cleanupVote();
+        $comment->delete();
+        return redirect()->back();
 	}
 
 }

@@ -35,4 +35,14 @@ class Matome extends Model {
     {
         return $this->created_at->diffForHumans();
     }
+
+    /**
+     * Return no format content.
+     *
+     * @return string
+     */
+    public function noFormatContent()
+    {
+        return strip_tags($this->content);
+    }
 }

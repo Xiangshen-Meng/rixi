@@ -1,13 +1,14 @@
 <div class="matome-list">
     @forelse ( $matomes as $matome)
-        <div class="matome">
+        <div class="matome-element">
             <h3>
+                <i class="fa fa-bookmark-o icon-padding-right"></i>
                 <a href="{{ route('matome.show', $matome) }}">
-                    <i class="fa fa-bookmark-o icon-padding-right"></i>{{ $matome->title }}
+                    {{ $matome->title }}
                 </a>
             </h3>
         </div>
     @empty
-        <p>等待第一个整理帖的出现！</p>
+        <p>赶快来写第一个整理帖吧！</p>
     @endforelse
 </div>

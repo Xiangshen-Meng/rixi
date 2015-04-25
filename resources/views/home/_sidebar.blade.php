@@ -15,6 +15,11 @@
         </a>
     </div>
     <div class="sidebar-element">
+        <a href="{{ route('my_matomes') }}">
+            <img src="/images/icons/booklet.png" width="{{ \Route::is('my_matomes') ? '70' : '50' }}" class="icon-lg-padding-right"/>我的整理帖
+        </a>
+    </div>
+    <div class="sidebar-element">
         <a href="{{ route('my_comments') }}">
             <img src="/images/icons/compose.png" width="{{ \Route::is('my_comments') ? '70' : '50' }}" class="icon-lg-padding-right"/>我的评论
         </a>

@@ -48,6 +48,16 @@ class Comment extends Model {
     }
 
     /**
+     * Cleanup votes of this comment.
+     *
+     * @return mixed
+     */
+    public function cleanupVote()
+    {
+        return \DB::table('votes')->where('comment_id', $this->id)->delete();
+    }
+
+    /**
      * Return the number of voter(vote).
      *
      * @return mixed

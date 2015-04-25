@@ -20,7 +20,11 @@
     @endif
 
     <script id="rixi-editor" name="content">
-        {!! html_entity_decode(old('content')) !!}
+        @if (old('content'))
+            {!! html_entity_decode(old('content')) !!}
+        @else
+            {!! html_entity_decode($matome->content) !!}
+        @endif
     </script>
     @include('shared._ueditor', ['editor_height' => 400])
 </div>

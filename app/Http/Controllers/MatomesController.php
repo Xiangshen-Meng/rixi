@@ -67,9 +67,14 @@ class MatomesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit($matome)
 	{
-		//
+        $topic = Topic::find($matome->topic_id);
+        if ($matome->user_id == Auth::id()) {
+            return view('matomes.edit', compact('matome', 'topic'));
+        } else {
+            return redirect()->route('matome.show', $matome)->with('message', '啊哦，这可不好哦～');
+        }
 	}
 
 	/**
@@ -78,9 +83,10 @@ class MatomesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(MatomeRequest $request, $matome)
 	{
-		//
+        $matome->update($request->except('topic_id'));
+        return redirect()->route('matome.show', $matome);
 	}
 
 	/**
