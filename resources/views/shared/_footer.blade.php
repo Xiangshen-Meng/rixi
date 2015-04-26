@@ -7,7 +7,6 @@
             <div class="col-md-8 col-sm-8">
                 <ul class="bottom-menu-list">
                     <li><a href="http://shalery.net/" target="_blank">关于我们</a></li>
-                    <li><a href="http://rixi.me/" target="_blank">日系广播站</a></li>
                     <li><a href="http://transjp.info/" target="_blank">日本头条资讯</a></li>
                 </ul>
             </div>
