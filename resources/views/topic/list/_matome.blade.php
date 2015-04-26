@@ -2,7 +2,7 @@
     @forelse ( $matomes as $matome)
         <div class="matome-element">
             <h3>
-                <i class="fa fa-bookmark-o icon-padding-right"></i>
+                <i class="fa fa-angle-right icon-padding-right"></i>
                 <a href="{{ route('matome.show', $matome) }}">
                     {{ $matome->title }}
                 </a>
