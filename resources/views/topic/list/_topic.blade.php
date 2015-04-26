@@ -14,6 +14,9 @@
                 <span class="span-padding-right">
                     <i class="fa fa-comments icon-padding-right text-info"></i> {{ $topic->comments->count() }}
                 </span>
+                <span class="span-padding-right">
+                    <i class="fa fa-bookmark icon-padding-right text-secondary"></i> {{ $topic->matomes->count() }}
+                </span>
                 <span class="span-padding-right" style="font-size:15px">
                     <img src="/images/avatar/{{ $topic->author->getAvatarName() }}" />
                     <span class="text-primary">{{ $topic->author->name }}</span>
