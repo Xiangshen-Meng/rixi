@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', '日系问答-关于日本的问题，有问必答')
+@section('title', '日系问答_关于日本的问题，有问必答')
 
 @section('content')
     @include('shared._topbar')
