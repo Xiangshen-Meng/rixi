@@ -1,6 +1,7 @@
 @extends('app')
 
 @section('title', $matome->title)
+@section('meta_desc', $matome->noFormatContent())
 
 @section('content')
     @include('shared._topbar')

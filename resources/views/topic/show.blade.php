@@ -1,6 +1,7 @@
 @extends('app')
 
 @section('title', $topic->title)
+@section('meta_desc', $topic->description)
 
 @section('custom_header')
     @include('UEditor::head')
