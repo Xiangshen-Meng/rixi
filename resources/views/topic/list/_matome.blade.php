@@ -2,13 +2,13 @@
     @forelse ( $matomes as $matome)
         <div class="matome-element">
             <h3>
-                <i class="fa fa-angle-right icon-padding-right"></i>
                 <a href="{{ route('matome.show', $matome) }}">
                     {{ $matome->title }}
                 </a>
+                <i class="fa fa-angle-double-right"></i>
             </h3>
             <p>
-                {{ str_limit($matome->noFormatContent(), 20) }}
+                {{ str_limit($matome->noFormatContent(), 30) }}
             </p>
         </div>
     @empty
